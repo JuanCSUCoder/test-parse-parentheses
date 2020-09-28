@@ -1,5 +1,5 @@
 fn main() {
-    println!("This is a simple test program for parenthesis parsing!!");
+    // println!("This is a simple test program for parenthesis parsing!!");
 
     let to_parse_string = "(())()(((())))".to_string();
 
@@ -15,7 +15,7 @@ fn main() {
     let mut level: usize = 0;
 
     for index in 0..to_parse_string.len() {
-        println!("Iter Start Value: {} Level: {} GF: {} GS: {}", charlist[index], level, got_open_par, got_close_par);
+        // println!("Iter Start Value: {} Level: {} GF: {} GS: {}", charlist[index], level, got_open_par, got_close_par);
         if !got_open_par && charlist[index] == '(' {
             first_open_par_index = index;
             got_open_par = true;
@@ -27,9 +27,9 @@ fn main() {
         } else if charlist[index] == ')' {
             level -= 1;
         }
-        println!("Iter End Value: {} Level: {} GF: {} GS: {}", charlist[index], level, got_open_par, got_close_par);
+        // println!("Iter End Value: {} Level: {} GF: {} GS: {}", charlist[index], level, got_open_par, got_close_par);
     }
 
-    println!("Start: {}",first_open_par_index);
-    println!("End: {}", last_close_par_index);
+    // println!("Start: {}",first_open_par_index);
+    // println!("End: {}", last_close_par_index);
 }
